@@ -4,7 +4,7 @@ from flask_marshmallow import Marshmallow
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://rootQlocalhost/pedidosr'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/pedidosr'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 

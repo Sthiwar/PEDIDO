@@ -2,7 +2,7 @@ from config.db import db, app, ma
 
 
 class Repartidor(db.Model):
-    __tablename__ = "tblrepartior"
+    __tablename__ = "tblrepartidor"
 
     id = db.Column(db.Integer, primary_key=True)
     Nombre = db.Column(db.String(200))

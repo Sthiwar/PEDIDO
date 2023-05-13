@@ -7,14 +7,16 @@ class RegistroPedido(db.Model):
     id_Cliente = db.Column(db.Integer, db.ForeignKey('tblclientes.id'))
     id_Producto = db.Column(db.Integer, db.ForeignKey('tblproductos.id'))
     id_Local = db.Column(db.Integer, db.ForeignKey('tblproveedores.id'))
+    id_Repartidor = db.Column(db.Integer, db.ForeignKey('tblrepartidor.id'))   
     Cantidad = db.Column(db.Integer)
     Num_Pedido = db.Column(db.Integer)
     
 
-    def __init__(self, id_Cliente, id_Producto, Cantidad ):
+    def __init__(self, id_Cliente, id_Producto,id_Local,id_Repartidor, Cantidad, Num_Pedido ):
         self.id_Cliente = id_Cliente
         self.id_Producto = id_Producto
         self.id_Local = id_Local
+        self.id_Repartidor = id_Repartidor
         self.Cantidad = Cantidad
         self.Num_Pedido = Num_Pedido
 
@@ -24,4 +26,4 @@ with app.app_context():
 
 class RegistroPedidoSchema(ma.Schema):
     class meta:
-        fields = ('id', 'id_Cliente','id_Producto','id_Local', 'Cantidad','Num_Pedido' )
+        fields = ('id', 'id_Cliente','id_Producto','id_Local','id_Repartidor', 'Cantidad','Num_Pedido' )
