@@ -27,5 +27,5 @@ class Repartidor(db.Model):
 
 class RepartidorSchema(ma.Schema):
     class Meta:
-        fields = ('id', 'Nmobre','Apellido', 'Email', 'password',
+        fields = ('id', 'Nombre','Apellido', 'Email', 'password',
                   'usuario','telefono')

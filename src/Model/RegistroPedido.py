@@ -4,10 +4,10 @@ class RegistroPedido(db.Model):
     __tablename__ = "tblregistropedido"
 
     id = db.Column (db.Integer, primary_key = True)
+    id_Repartidor = db.Column(db.Integer, db.ForeignKey('tblrepartidor.id'))
     id_Cliente = db.Column(db.Integer, db.ForeignKey('tblclientes.id'))
     id_Producto = db.Column(db.Integer, db.ForeignKey('tblproductos.id'))
     id_Local = db.Column(db.Integer, db.ForeignKey('tblproveedores.id'))
-    id_Repartidor = db.Column(db.Integer, db.ForeignKey('tblrepartidor.id'))   
     Cantidad = db.Column(db.Integer)
     Num_Pedido = db.Column(db.Integer)
     
