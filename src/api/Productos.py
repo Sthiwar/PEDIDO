@@ -8,8 +8,8 @@ from Model.Productos import Productos, ProductosSchema
 routes_Producto = Blueprint("routes_Producto", __name__)
 
 #PRODUCTO - Schema 
-Producto_Schema = Producto_chema()
-Productos_Schema = Productos_Schema(many=True)
+Producto_Schema = ProductosSchema()
+Productos_Schema = ProductosSchema(many=True)
 
 @routes_Producto.route('/Productos', methods=['GET'] )
 def Productos():
@@ -53,7 +53,7 @@ def eliminar_Product(id):
 
 #||||||||||||||||ACTUALIZAR|||||||||||||||||||||
 
-@routes_Producto.route('/updateClientes', methods=['POST'] )
+@routes_Producto.route('/updateProd', methods=['POST'] )
 def actualizar_Prod():
     id = request.json['id']
     new_prod = request.json['N_Product']
