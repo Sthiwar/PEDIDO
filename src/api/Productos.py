@@ -49,12 +49,26 @@ def eliminar_Product(id):
     prod = Productos.query.get(id)
     db.session.delete(prod)
     db.session.commit()
-    return jsonify(Productos_Schema.dump(cli)) 
+    return jsonify(Productos_Schema.dump(prod)) 
 
 #||||||||||||||||ACTUALIZAR|||||||||||||||||||||
 
-@routes_Producto.route('/updateProd', methods=['POST'] )
+'''@routes_Producto.route('/updateProd', methods=['POST'] )
 def actualizar_Prod():
+    id = request.json['id']
+    new_prod = request.json['N_Product']
+    Descripcion = request.json['Descripcion']
+    updateProd = Productos.query.get(id)
+    updateProd.nameClie = new_prod
+    updateProd.descripProd = Descripcion
+    db.session.commit()
+    return redirect('/Productos')
+
+#//////////////////////////////////////////////////
+'''
+
+@routes_Producto.route('/updateProd', methods=['POST'] )
+def actualizar_Product():
     id = request.json['id']
     new_prod = request.json['N_Product']
     Descripcion = request.json['Descripcion']

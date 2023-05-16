@@ -5,7 +5,7 @@ from flask import Flask,  redirect, request, jsonify, json, session, render_temp
 
 from Model.Clientes import Clientes, ClientesSchema
 
-routes_cliente = Blueprint("routes_cliente", _name_)
+routes_Cliente = Blueprint("routes_cliente", __name__)
 
 #CLIENTE - Schema 
 Cliente_schema = ClientesSchema()
@@ -49,7 +49,7 @@ def eliminar_Clie(id):
     cli = Clientes.query.get(id)
     db.session.delete(cli)
     db.session.commit()
-    return jsonify(ClietesSchema.dump(cli)) 
+    return jsonify(ClientesSchema.dump(cli)) 
 
 #||||||||||||||||ACTUALIZAR|||||||||||||||||||||
 

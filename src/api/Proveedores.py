@@ -49,17 +49,17 @@ def eliminar_Provedor(id):
     prove = Proveedores.query.get(id)
     db.session.delete(prove)
     db.session.commit()
-    return jsonify(Proveedores_Schema.dump(cli)) 
+    return jsonify(Proveedores_Schema.dump(prove)) 
 
 #||||||||||||||||ACTUALIZAR|||||||||||||||||||||
 
-@routes_Producto.route('/updateProd', methods=['POST'] )
+@routes_Proveedores.route('/updateProd', methods=['POST'] )
 def actualizar_Prod():
     id = request.json['id']
-    new_prod = request.json['N_Product']
+    new_prove = request.json['N_Prove']
     Descripcion = request.json['Descripcion']
-    updateProd = Productos.query.get(id)
-    updateProd.nameClie = new_prod
-    updateProd.descripProd = Descripcion
+    updateProd = Proveedores.query.get(id)
+    updateProd.nameProve= new_prove
+    updateProd.descripProve = Descripcion
     db.session.commit()
-    return redirect('/Productos')
+    return redirect('/Provedores')
