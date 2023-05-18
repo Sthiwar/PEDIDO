@@ -1,11 +1,29 @@
+from flask import Blueprint, request, jsonify, json
 from config.db import db, app, ma
-from flask import Blueprint, Flask,  redirect, request, jsonify, json, session, render_template
-from Model.Clientes import Clientes
+from flask import Flask,  redirect, request, jsonify, json, session, render_template
+from Model.Clientes import Clientes, ClientesSchema
 
-routes_Admin = Blueprint("routes_Clientes", __name__)
+routes_Cliente = Blueprint("routes_Cliente", __name__)
+
+#CLIENTE - Schema 
+Cliente_schema = ClientesSchema()
+Clientes_Schema = ClientesSchema(many=True)
 
 
-@routes_Clientes.route('/indexClientes', methods=['GET'] )
-def indexClientes():
+@routes_Cliente.route('/Guardar_Clientes', methods=['POST'] )
+def Guardar_Client():
     
-    return render_template('/main/Clientes.html')
+    Nombre = request.form['Nombre']
+    Apellido = request.form['Apellido']
+    Email = request.form['Email']
+    password = request.form['password']
+    usuario = request.form['usuario']
+    telefono = request.form['telefono']
+    direccion = request.form['direccion']
+    # problema = date.today()
+    print(Nombre)
+    new_cli = cliente( Nombre, Apellido,Email,password,usuario,telefono, direccion,problema,id_paciente,id_odontologos)
+    db.session.add(new_cli)
+    db.session.commit()
+    return "si"
+    

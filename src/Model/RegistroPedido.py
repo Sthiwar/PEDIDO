@@ -12,11 +12,11 @@ class RegistroPedido(db.Model):
     Num_Pedido = db.Column(db.Integer)
     
 
-    def __init__(self, id_Cliente, id_Producto,id_Local,id_Repartidor, Cantidad, Num_Pedido ):
+    def __init__(self, id_Repartidor, id_Cliente, id_Producto, id_Local,  Cantidad, Num_Pedido ):
+        self.id_Repartidor = id_Repartidor
         self.id_Cliente = id_Cliente
         self.id_Producto = id_Producto
         self.id_Local = id_Local
-        self.id_Repartidor = id_Repartidor
         self.Cantidad = Cantidad
         self.Num_Pedido = Num_Pedido
 
@@ -26,4 +26,4 @@ with app.app_context():
 
 class RegistroPedidoSchema(ma.Schema):
     class meta:
-        fields = ('id', 'id_Cliente','id_Producto','id_Local','id_Repartidor', 'Cantidad','Num_Pedido' )
+        fields = ('id','id_Repartidor', 'id_Cliente','id_Producto','id_Local', 'Cantidad','Num_Pedido' )

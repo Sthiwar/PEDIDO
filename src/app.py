@@ -3,15 +3,14 @@ from config.db import db, app, ma
 
 
 #model
+from Model.Repartidor import Repartidor
 from Model.Clientes import Clientes
 from Model.Productos import Productos
 from Model.Proveedores import Proveedores
 from Model.RegistroPedido import RegistroPedido
-from Model.Repartidor import Repartidor
 
-
-#import bluplin
-
+#rutas
+from rutas.Clientes import routes_Cliente
 
 
 @app.route("/")
