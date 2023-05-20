@@ -6,19 +6,14 @@
     </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="Shortcut Icon" href="{{url_for('static', filename='assets/icons/book.ico')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
-   
 </head>
 <body>
  
   {% block body %}
   {% endblock %}
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="{{url_for("static", filename="js/jquery-1.11.2.min.js")}}"><\/script>')</script>
   <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
   <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
