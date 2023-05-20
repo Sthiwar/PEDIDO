@@ -12,6 +12,7 @@ from Model.RegistroPedido import RegistroPedido
 #rutas
 from rutas.Clientes import routes_Cliente
 
+app.register_blueprint(routes_Cliente, url_prefix='/fronted')
 
 @app.route("/")
 def index():

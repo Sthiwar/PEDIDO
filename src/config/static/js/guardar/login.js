@@ -1,25 +1,23 @@
 
 
 function Guar_Clientes() {
-    const personaN = document.getElementById('tipoPersona');
+    const tipoPersona = document.getElementById('tipoPersona');
     const nombre = document.getElementById('nombre');
     const correo = document.getElementById('correo');
     const contraseña = document.getElementById('contraseña');
     const nomusario = document.getElementById('nomusario');
     const direc = document.getElementById('direc');
     const telefono = document.getElementById('telefono');
+    
 
-alert.log(personaN, nombre, correo, contraseña,nomusario,direc,telefono);
-    axios.post('Guardar_Clientes', {
-        Nombre: personaN.value,
-        Apellido: nombre.value,
+    axios.post('fronted/Guardar_Clientes', {
+        tipoPersona: tipoPersona.value,
+        NombreC: nombre.value,
         Email: correo.value,
         password: contraseña.value,
         usuario: nomusario.value,
-        telefono: direc.value,
-        direccion: telefono.value
-      
-
+        telefono: telefono.value,
+        direccion: tipoPersona.value === 'PersonaNormal' ? direc.value : ''
     }, {
         headers: {
         'Content-Type': 'multipart/form-data'
@@ -28,8 +26,11 @@ alert.log(personaN, nombre, correo, contraseña,nomusario,direc,telefono);
     }
     ).then((res) => {
         console.log(res.data)
+        console.log("si")
+        alert("si")
     })
     .catch((error) => {
         console.error(error)
+        alert(error)
     })
 }
