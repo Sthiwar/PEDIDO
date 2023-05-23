@@ -5,7 +5,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+                  <a class="navbar-brand" href="index.html"><img width="250" src="{{url_for('static', filename='assets/images/logo.png')}}" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -70,7 +70,7 @@
                                                 <input id="nomusario" type="text" placeholder="Usuario">
                                                
                                                 <input type="text" id="direc" placeholder="Direccion">
-                                                <input id="telefono" type="text" placeholder="Telefono">
+                                                <input  type="text" id="telefono" placeholder="Telefono"> 
                                                 <button type="button" onclick="Guar_Clientes()">Regístrarse</button>
                                             </form>
                                         </div>
@@ -118,7 +118,7 @@
                            <a href="" class="option2">Comprar Ahora </a>
                         </div>
                      </div>
-                     <div class="img-box"><img src="images/Camisa.png" alt=""></div>
+                     <div class="img-box"><img src="{{url_for('static', filename='assets/images/Camisa.png')}}"alt=""></div>
                      <div class="detail-box">
                         <h5> Camisa de hombre</h5>
                         <h6>$75.000</h6>
@@ -135,7 +135,7 @@
                            <a href="" class="option2">Comprar Ahora</a>
                         </div>
                      </div>
-                     <div class="img-box"><img src="images/Gorra" alt=""></div>
+                     <div class="img-box"><img src="{{url_for('static', filename='assets/images/Gorra.jpg')}}" alt=""></div>
                      <div class="detail-box">
                         <h5>Gorra Monastery Arabella Camel</h5>
                         <h6>$280.000</h6>
@@ -152,7 +152,7 @@
                            <a href="" class="option2">Comprar Ahora</a>
                         </div>
                      </div>
-                     <div class="img-box"><img src="images/Gafas gamer" alt=""></div>
+                     <div class="img-box"><img src="{{url_for('static', filename='assets/images/Gafas gamer.jpg')}}" alt=""></div>
                      <div class="detail-box">
                         <h5>Sony Ps Gafas Virtual </h5>
                         <h6>$680.000</h6>
@@ -170,7 +170,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Arroz.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Arroz.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Arroz Chino 2Lb</h5>
@@ -189,7 +189,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Chaqueta" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Chaqueta.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Jacket Versace Couture </h5>
@@ -208,7 +208,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/T.V.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/T.V.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>TV LG 77"</h5>
@@ -227,7 +227,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Pizza" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Pizza.png')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Pizza pepperoni-Familiar</h5>
@@ -246,7 +246,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Reloj" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Reloj.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Reloj Invicta </h5>
@@ -265,7 +265,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Portatil" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Portatil.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Portatil gamer </h5>
@@ -284,7 +284,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Salchipapa.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Salchipapa.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Salchipapa La mamá de la mamá</h5>
@@ -303,7 +303,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/Zapatos" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Zapatos.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Tenis blancos hombre</h5>
@@ -322,7 +322,7 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/iPhone 14PRO+" alt="">
+                        <img src="{{url_for('static', filename='assets/images/iPhone 14PRO+.jpg')}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>Celular Iphone 14 Pro</h5>
