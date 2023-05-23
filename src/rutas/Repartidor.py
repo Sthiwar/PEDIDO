@@ -19,8 +19,8 @@ def Guardar_Repartid():
     usuario = request.form['usuario']
     telefono = request.form['telefono']
     # problema = date.today()
-    print(Nombre)
-    new_rep = Repartidor( Nombre, Apellido,Email,password,usuario,telefono)
+    print(NombreC)
+    new_rep = Repartidor( NombreC,Email,password,usuario,telefono)
     db.session.add(new_rep)
     db.session.commit()
-    return "si"
+    return "Si"
