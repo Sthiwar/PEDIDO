@@ -11,6 +11,8 @@ Cliente_schema = ClientesSchema()
 Clientes_Schema = ClientesSchema(many=True)
 
 
+
+
 @routes_Cliente.route('/Guardar_Clientes', methods=['POST'])
 def Guardar_Client():
     tipoPersona = request.form['tipoPersona']
@@ -31,3 +33,17 @@ def Guardar_Client():
         db.session.commit()
         
     return "si"
+
+@routes_Cliente.route("/validar_login", methods=["POST"])
+def validar_login():
+    Email = request.json["Email"]
+    password = request.json["password"]
+
+    verificacion_cliente = Clientes.query.filter_by(Email=Email, password=password).first()
+    verificacion_repartidor = Repartidor.query.filter_by(Email=Email, password=password).first()
+
+    # Busca el usuario en la base de datos
+    if verificacion_cliente or verificacion_repartidor:
+        return "Correcto"
+    else:
+        return "Incorrecto"
