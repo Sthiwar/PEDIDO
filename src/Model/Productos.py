@@ -12,7 +12,7 @@ class Productos(db.Model):
 
     def __init__(self, NombreP, categoria):
         self.NombreP = NombreP
-        self.Categoria = Categoria
+        self.Categoria = categoria
         
         with app.app_context():
             db.create_all()
