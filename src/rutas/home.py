@@ -20,4 +20,18 @@ def contacto():
     titulo = "Pagina contacto"
     return render_template('/main/contact.html', titles=titulo)
 
+@routes_home.route("/accesorios",  methods=['GET'])
+def accesorios():
+    titulo = "Pagina accesorios"
+    return render_template('/main/accesorios.html', titles=titulo)
+
+@routes_home.route("/comida",  methods=['GET'])
+def comida():
+    titulo = "Pagina comida"
+    return render_template('/main/comida.html', titles=titulo)
+
+@routes_home.route("/ropa",  methods=['GET'])
+def ropa():
+    titulo = "Pagina ropa"
+    return render_template('/main/ropa.html', titles=titulo)
 
