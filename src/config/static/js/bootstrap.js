@@ -4476,28 +4476,8 @@ function register() {
         caja_trasera_login.style.opacity = "1";
     }
 }
-
-function registro(){
-  window.location.href='Proyecto123/Repartidor/product.html';
-  }
-
 //fin modal
 
 // seleccion de tipo//
-function tipo() {
-  // Obtenemos el valor del tipo de persona
-  const tipoPersona = document.getElementById("tipoPersona").value;
 
-  // Seleccionamos el elemento que queremos mostrar/ocultar
-  const direccion = document.getElementById("direc");
-
-  // Mostramos u ocultamos el elemento según el tipo de persona
-  if (tipoPersona == 'PersonaNormal') {
-    direccion.style.display = 'block';
-  } else if (tipoPersona == 'Repartidor') {
-    direccion.style.display = 'none';
-  }else if (tipoPersona == 'Selecciona') {
-    direccion.style.display = 'none';
-  }
-}
 
