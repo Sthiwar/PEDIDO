@@ -35,3 +35,12 @@ def ropa():
     titulo = "Pagina ropa"
     return render_template('/main/ropa.html', titles=titulo)
 
+@routes_home.route("/repartidor",  methods=['GET'])
+def repartidor():
+    titulo = "Pagina repartidor"
+    return render_template('/main/repartidor.html', titles=titulo)
+
+@routes_home.route("/cliente",  methods=['GET'])
+def cliente():
+    titulo = "Pagina repartidor"
+    return render_template('/main/cliente.html', titles=titulo)
