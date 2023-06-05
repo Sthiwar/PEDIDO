@@ -14,7 +14,7 @@ Clientes_Schema = ClientesSchema(many=True)
 
 
 @routes_Cliente.route('/Guardar_Clientes', methods=['POST'])
-def Guardar_Client():
+def Guardar_Clientes():
     tipoPersona = request.form['tipoPersona']
     NombreC = request.form['NombreC']
     Email = request.form['Email']
@@ -36,6 +36,7 @@ def Guardar_Client():
 
 @routes_Cliente.route("/validar_login", methods=["POST"])
 def validar_login():
+    
     Email = request.json["Email"]
     password = request.json["password"]
 

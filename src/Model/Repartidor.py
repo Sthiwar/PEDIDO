@@ -9,7 +9,7 @@ class Repartidor(db.Model):
     Email = db.Column(db.String(200))
     password = db.Column(db.String(200))
     usuario = db.Column(db.String(200))
-    telefono = db.Column(db.Integer)
+    telefono = db.Column(db.String(10))
    
 
     def __init__(self, NombreC, Email, password, usuario, telefono):
