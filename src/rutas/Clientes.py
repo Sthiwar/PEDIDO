@@ -36,7 +36,7 @@ def Guardar_Clientes():
 
 @routes_Cliente.route("/validar_login", methods=["POST"])
 def validar_login():
-    
+    tipoPersona = request.json['tipoPersona']
     Email = request.json["Email"]
     password = request.json["password"]
 
@@ -44,7 +44,9 @@ def validar_login():
     verificacion_repartidor = Repartidor.query.filter_by(Email=Email, password=password).first()
 
     # Busca el usuario en la base de datos
-    if verificacion_cliente or verificacion_repartidor:
-        return "Correcto"
+    if tipoPersona == 'PersonaNormal' and verificacion_cliente:
+        return "Correcto cliente"
+    elif tipoPersona == 'Repartidor' and verificacion_repartidor:
+        return "Correcto repartidor"
     else:
         return "Incorrecto"

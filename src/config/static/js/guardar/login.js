@@ -51,10 +51,10 @@ function ingreso(){
         password: password.value
 
     },).then((res) => {
-        if(tipoPersona === 'PersonaNormal'){
+        if(tipoPersona == 'PersonaNormal'){
             window.location.href='/fronted/productos';
 
-        }else if(tipoPersona === 'Repartidor'){
+        }else if(tipoPersona == 'Repartidor'){
             window.location.href='/fronted/repartidor';
         }
             console.log(res.data)
