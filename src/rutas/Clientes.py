@@ -3,6 +3,10 @@ from config.db import db, app, ma
 from flask import Flask,  redirect, request, jsonify, json, session, render_template
 from Model.Clientes import Clientes, ClientesSchema
 from Model.Repartidor import Repartidor
+from Model.RegistroPedido import RegistroPedido
+from Model.Productos import Productos
+from Model.Proveedores import Proveedores
+
 
 routes_Cliente = Blueprint("routes_Cliente", __name__)
 
@@ -50,3 +54,22 @@ def validar_login():
         return "Correcto repartidor"
     else:
         return "Incorrecto"
+    
+@routes_Cliente.route('/mostrar_pedido', methods=['GET'])
+def mostrarpedido():
+    datos= {}
+    resultado = db.session.query(RegistroPedido,Clientes,Productos,Proveedores).select_from(RegistroPedido,Clientes,Productos,Proveedores).all()
+    i=0
+    goria = []
+    for cate,clie,pro,prov in resultado:
+        i+=1	       
+        datos[i] = { 
+        'Id':cate.id,
+		'N_de_pedido':cate.Num_Pedido,
+		'Nombre_del_Cliente':clie.NombreC,
+		'Productos':pro.NombreP,
+		'Cantidad':cate.Cantidad,                                                    
+		'Local':prov.NombrePrvdor,                                                    
+        }
+        goria.append(datos)
+    return jsonify(datos)

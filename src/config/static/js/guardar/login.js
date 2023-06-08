@@ -81,3 +81,36 @@ function tipo() {
       direccion.style.display = 'block';
     }
   }
+
+  function mostrar() {
+    const divcate = document.getElementById('tablaM');
+    axios.get('mostrar_pedido', {
+      responseType: 'json'
+    })
+  
+      .then(function (response) {
+        let datos = response.data
+        var length = (Object.keys(datos).length) + 1;
+        let mostrar = '';
+        i = 0
+        for (let index = 1; index < length; index++) {
+          mostrar += ` <tr>   
+                  <td >${datos[index].Id}</td>  
+                  <td >${datos[index].N_de_pedido}</td>  
+                  <td >${datos[index].Nombre_del_Cliente}</td>  
+                  <td>${datos[index].Productos}</td>
+                  <td>${datos[index].Cantidad}</td>
+                  <td>${datos[index].Local}</td>  
+                  <td><a onclick="abrir_modal_actualizar() "class="btn btn-primary btn-edit">Ver detalles</a></td>
+                </tr> `;
+        }
+        divcate.innerHTML = mostrar
+      })
+      .catch(function (error) {
+        // Maneja los errores aquí
+        console.log(error);
+      });
+  }
+  window.addEventListener('load', function () {
+    mostrar();
+  })
