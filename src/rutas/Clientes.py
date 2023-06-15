@@ -42,19 +42,16 @@ def Guardar_Clientes():
 def validar_login():
     tipoPersona = request.json['tipoPersona']
     email = request.json["email"]
-    password = request.json["pass"]
+    password = request.json["password"]
 
     if tipoPersona == 'PersonaNormal':
         cliente = Clientes.query.filter_by(Email=email).first()
         if cliente and cliente.password == password:
-            return "Correcto cliente"
+            return  jsonify({"message":"Correcto cliente"})
     elif tipoPersona == 'Repartidor':
         repartidor = Repartidor.query.filter_by(Email=email).first()
         if repartidor and repartidor.password == password:
-            return "Correcto repartidor"
-
-    return "Incorrecto"
-
+            return jsonify({"message":"Correcto repartidor"})
     
 @routes_Cliente.route('/mostrar_pedido', methods=['GET'])
 def mostrarpedido():

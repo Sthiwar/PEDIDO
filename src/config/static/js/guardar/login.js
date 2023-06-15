@@ -40,20 +40,20 @@ function Guar_Clientes() {
 }
 
 function ingreso() {
-  const tipoPersona = document.getElementById('tipoPersona').value;
+  const tipoPersona = document.getElementById('tipoPersonalogin');
   const email = document.getElementById('email').value;
   const password = document.getElementById('pass').value;
 
-  axios.post('/validar_login', {
-    tipoPersona: tipoPersona,
+  axios.post('/fronted/validar_login', {
+    tipoPersona: tipoPersona.value,
     email: email,
     password: password
   })
     .then((response) => {
       const resultado = response.data;
-      if (resultado === 'Correcto cliente') {
+      if (resultado.message === 'Correcto cliente') {
         window.location.href = '/fronted/cliente';
-      } else if (resultado === 'Correcto repartidor') {
+      } else if (resultado.message === 'Correcto repartidor') {
         window.location.href = '/fronted/repartidor';
       } else {
         alert('Inicio de sesión incorrecto');
