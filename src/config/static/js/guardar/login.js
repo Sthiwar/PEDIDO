@@ -138,4 +138,13 @@ function eliminarP(Id) {
       console.log(error);
     });
 }
+function cerrarV() {
+  // Obtén una referencia a la ventana emergente actual
+  const contener_todo = document.getElementById('contener__todo');
+
+  // Cierra la ventana emergente
+  if (contener_todo == contener_todo) {
+    window.location.href = '/fronted/index';
+  }
+}
 

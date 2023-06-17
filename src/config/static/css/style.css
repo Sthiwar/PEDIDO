@@ -1293,6 +1293,14 @@ form input[type="submit"]:focus {
   opacity: 0;
   visibility: hidden;
 }
+.modal-exit{
+  position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #ffffff; 
+}
 
 #btn-modal:checked~.modal {
   opacity: 1;
