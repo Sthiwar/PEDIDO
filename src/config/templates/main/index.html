@@ -23,10 +23,19 @@
                         <li class="nav-item">
                            <a class="nav-link" href="/fronted/contacto">Contactos</a>
                         </li>
+
+
+
+
+
+                        
  
                             <input type="checkbox" id="btn-modal">
                             <label for="btn-modal" class="lbl-modal">SING IN</label>
                             <div class="modal">
+
+
+                             
                               
                                 <h3>
 
@@ -81,6 +90,8 @@
                                                 <input  type="text" id="telefono" placeholder="Telefono"> 
                                                 <button type="button" onclick="Guar_Clientes()">Regístrarse</button>
                                             </form>
+
+                                            
                                         </div>
                                     </div>
 
@@ -97,6 +108,25 @@
                         <div class="position-relative">
                            <input type="text" class="form-control" placeholder="Search...">
                        </div>
+                       <!--AQUI ESTA EL LOGO DEL CARRO-->
+                       <div class="position-relative">
+<div class="header-section container">
+   
+   <div>
+       <img onclick="showCart(this)" class="cart" src="{{url_for('static', filename='assets/images/cart.png')}}" alt="">
+       <p class="count-product">0</p>
+   </div>
+   <div class="cart-products" id="products-id">
+       <p class="close-btn" onclick="closeBtn()">X</p>
+       <h3>Mi carrito</h3>
+       <div class="card-items">
+          
+       </div>
+       <h2>Total: $<strong class="price-total">0</strong></h2>
+   </div>
+</div>
+</div>
+<!--AQUI TERMINA EL LOGO DEL CARRO-->
                      </ul>
                   </div>
                </nav>
@@ -115,7 +145,7 @@
                <h2><span>Productos</span></h2>
             </div>
 
-            <div class="row">
+           <!-- <div class="row">
 
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
@@ -338,6 +368,125 @@
                   </div>
                </div>
             </div>
+         -->
+
+
+
+
+
+<!--Intento carrito-->
+
+
+
+
+   
+
+<section class="container">
+   <div class="products">
+       <div class="carts">
+         <div class="img-box">
+            <img src="{{url_for('static', filename='assets/images/iPhone 14PRO+.jpg')}}" alt="">
+            <p><span>35</span>$</p>
+         </div>
+           <p class="title">Tempest Cataclysm Combo 3 En 1 Gaming Teclado</p>
+           <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+         <div class="img-box">
+            <img src="{{url_for('static', filename='assets/images/Zapatos.jpg')}}" alt="">
+            <p><span>35</span>$</p>
+         </div>
+           <p class="title"> Newskill Suiko Ivory Teclado Mecánico Gaming Full RGB</p>
+           <a href="" class="btn-add-cart" data-id="2">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-3.jpg" alt="">
+               <p><span>15.50</span>$</p>
+           </div>
+           <p class="title"> Aukey KM-G16 Teclado Mecánico Gaming Retroiluminado</p>
+           <a href="" data-id="3" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-4.jpg" alt="">
+               <p><span>20.20</span>$</p>
+           </div>
+           <p class="title"> Razer Huntsman Elite Teclado Mecánico Gaming RGB</p>
+           <a href="" data-id="4" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-5.jpg" alt="">
+               <p><span>19</span>$</p>
+           </div>
+           <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+           <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-1.jpg" alt="">
+               <p><span>45</span>$</p>
+           </div>
+           <p class="title"> MSI Vigor GK30 Teclado Gaming RGB</p>
+           <a href="" data-id="6" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-2.jpg" alt="">
+               <p><span>23.99</span>$</p>
+           </div>
+           <p class="title"> Genesis Thor 300 RGB Teclado Mecánico Gaming RGB Switch Rojo</p>
+           <a href="" data-id="7" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-3.jpg" alt="">
+               <p><span>50</span>$</p>
+           </div>
+           <p class="title"> Mars Gaming MKXTKL Teclado Mecánico Gaming RGB</p>
+           <a href="" data-id="8" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-4.jpg" alt="">
+               <p><span>16</span>$</p>
+           </div>
+           <p class="title"> Trust GXT 881 Odyss Teclado Gaming Semi-Mecánico RGB</p>
+           <a href="" data-id="9" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-5.jpg" alt="">
+               <p><span>17.50</span>$</p>
+           </div>
+           <p class="title"> Krom Krusher Teclado Gaming Híbrido RGB + Ratón</p>
+           <a href="" data-id="10" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="./images/products/keyboard-1.jpg" alt="">
+               <p><span>45</span>$</p>
+           </div>
+           <p class="title"> Corsair K55 RGB PRO XT Teclado Gaming Retroiluminado Negro</p>
+           <a href="" data-id="11" class="btn-add-cart">add to cart</a>
+       </div>
+   </div>
+</section>
+
+
+
+<script>
+   function showCart(x){
+       document.getElementById("products-id").style.display = "block";
+   }
+   function closeBtn(){
+        document.getElementById("products-id").style.display = "none";
+   }
+
+</script>
+<script src="./custom.js" ></script>
+
 
 
             
