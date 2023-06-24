@@ -73,7 +73,7 @@
 </div>
 </section>
 <!-- end inner page section -->
-<!-- product section -->
+<!-- product section 
 <section class="product_section layout_padding">
 
   <div class="row">
@@ -295,13 +295,122 @@
         </div>
      </div>
   </div>
+-->
+<section class="container">
+   <div class="products">
+       <div class="carts">
+         <div class="img-box">
+            <img src="{{url_for('static', filename='assets/images/Gorra.jpg')}}" alt="">
+            <p><span>35</span>$</p>
+         </div>
+           <p class="title">Parkas Masculino</p>
+           <a href="" data-id="1" class="btn-add-cart">Agregar</a>
+       </div>
+       <div class="carts">
+         <div class="img-box">
+            <img src="{{url_for('static', filename='assets/images/Gafasredondas.jpg')}}" alt="">
+            <p><span>35</span>$</p>
+         </div>
+           <p class="title"> Zapatos Masculino</p>
+           <a href="" class="btn-add-cart" data-id="2">Agregar</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/RelojIn.jpg')}}" alt="">
+               <p><span>15.50</span>$</p>
+           </div>
+           <p class="title"> Reloj Inteligente</p>
+           <a href="" data-id="3" class="btn-add-cart">Agregar</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/GorraNY.jpg')}}" alt="">
+               <p><span>20.20</span>$</p>
+           </div>
+           <p class="title"> Razer Huntsman Elite Teclado Mecánico Gaming RGB</p>
+           <a href="" data-id="4" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/Gafaslujos.jpg')}}" alt="">
+               <p><span>19</span>$</p>
+           </div>
+           <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+           <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src=".{{url_for('static', filename='assets/images/RelojF.jpg')}}" alt="">
+               <p><span>45</span>$</p>
+           </div>
+           <p class="title"> MSI Vigor GK30 Teclado Gaming RGB</p>
+           <a href="" data-id="6" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/GorraA.jpg')}}" alt="">
+               <p><span>23.99</span>$</p>
+           </div>
+           <p class="title"> Genesis Thor 300 RGB Teclado Mecánico Gaming RGB Switch Rojo</p>
+           <a href="" data-id="7" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/Gafas gamer.jpg')}}" alt="">
+               <p><span>50</span>$</p>
+           </div>
+           <p class="title"> Mars Gaming MKXTKL Teclado Mecánico Gaming RGB</p>
+           <a href="" data-id="8" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/RelojIn.jpg')}}" alt="">
+               <p><span>16</span>$</p>
+           </div>
+           <p class="title"> Trust GXT 881 Odyss Teclado Gaming Semi-Mecánico RGB</p>
+           <a href="" data-id="9" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/GorraIndios.jpg')}}" alt="">
+               <p><span>17.50</span>$</p>
+           </div>
+           <p class="title"> Krom Krusher Teclado Gaming Híbrido RGB + Ratón</p>
+           <a href="" data-id="10" class="btn-add-cart">add to cart</a>
+       </div>
+       <div class="carts">
+           <div>
+               <img src="{{url_for('static', filename='assets/images/Cadena1.jpg')}}" alt="">
+               <p><span>45</span>$</p>
+           </div>
+           <p class="title"> Corsair K55 RGB PRO XT Teclado Gaming Retroiluminado Negro</p>
+           <a href="" data-id="11" class="btn-add-cart">add to cart</a>
+       </div>
+   </div>
+</section>
 
-  
+
+
+
+<footer>
+   <p class="author">🪐 by <a href="https://github.com/garu2" target="_blank">GaryAT</a></p>
+</footer>
+
+<script>
+   function showCart(x){
+       document.getElementById("products-id").style.display = "block";
+   }
+   function closeBtn(){
+        document.getElementById("products-id").style.display = "none";
+   }
+
+</script>
+
+
+   
 </div>
 </section>
-<!-- end product section -->
 
-<!-- footer section -->
 <!-- jQery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 <!-- popper js -->
@@ -311,4 +420,11 @@
 <!-- custom js -->
 <script src="js/custom.js"></script>
 
+<script src="./customCa.js" ></script>
+
+
+
+<script src="{{url_for('static', filename='js/guardar/login.js')}}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 {% endblock %}
+
