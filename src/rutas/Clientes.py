@@ -43,6 +43,7 @@ def validar_login():
     tipoPersona = request.json['tipoPersona']
     email = request.json["email"]
     password = request.json["password"]
+   
 
     if tipoPersona == 'PersonaNormal':
         cliente = Clientes.query.filter_by(Email=email).first()
@@ -54,7 +55,7 @@ def validar_login():
             return jsonify({"message":"Correcto repartidor"})
     
 @routes_Cliente.route('/mostrar_pedido', methods=['GET'])
-def mostrarpedido():
+def mostrar_pedido():
     datos= {}
     resultado = db.session.query(RegistroPedido,Clientes,Productos,Proveedores).select_from(RegistroPedido,Clientes,Productos,Proveedores).all()
     i=0

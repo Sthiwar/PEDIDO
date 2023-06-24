@@ -88,7 +88,7 @@ function tipo() {
 
 function mostrar() {
   const divcate = document.getElementById('tablaM');
-  axios.get('mostrar_pedido', {
+  axios.get('/fronted/mostrar_pedido', {
     responseType: 'json'
   })
 
