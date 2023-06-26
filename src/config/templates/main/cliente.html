@@ -31,23 +31,42 @@
 
                       
                               
-                        <li class="nav-item">
-                           <img onclick="showCart(this)" class="cart" src="{{url_for('static', filename='assets/images/cart.png')}}" alt="">
-                              <p class="count-product">0</p>
+                           <div class="header-section container">
+                               
+                               <div>
+                                   <img onclick="showCart(this)" class="cart" src="{{url_for('static', filename='assets/images/cart.png')}}" alt="">
+                                   <p class="count-product">0</p>
+                               </div>
+                               <div class="cart-products" id="products-id">
+                                   <p class="close-btn" onclick="closeBtn()">X</p>
+                                   <h3>Mi carrito</h3>
+                                   <div class="card-items">
+                                       <!-- <div class="item">
+                                           <img src="./images/products/keyboard-1.jpg" alt="">
+                                           <div class="item-content">
+                                               <h5>name of product name of product name of product</h5>
+                                               <h5 class="cart-price">45.50$</h5>
+                                               <h6>Amount: 3</h6>
+                                           </div>
+                                           <span>X</span>
+                                       </div>
                        
-                        <div class="cart-products" id="products-id">
-                            <p class="close-btn" onclick="closeBtn()">X</p>
-                                  
-                              <h3>Mi carrito</h3>
-                              <div class="card-items">
-                                     
-                        
-                              <h2>Total: $<strong class="price-total">0</strong></h2>
+                                       <div class="item">
+                                           <img src="./images/products/keyboard-1.jpg" alt="">
+                                           <div class="item-content">
+                                               <h5>name of product name of product name of product</h5>
+                                               <h5 class="cart-price">45.50$</h5>
+                                               <h6>Amount: 3</h6>
+                                           </div>
+                                           <span class="delete-product" data-id="">X</span>
+                                       </div> -->
+                                   </div>
+                                   <h2>Total: $<strong class="price-total">0</strong></h2>
+                                   
+                                   <a href=" " class ="btn-add-cart" data-id="2">Realizar Pedido</a>
+                               </div>
                               
-                              
-                        </div>
-                        </li>
-                       
+                           </div>
 
                         
                         
@@ -324,55 +343,55 @@
                         <img src="{{url_for('static', filename='assets/images/GorraNY.jpg')}}" alt="">
                         <p><span>19</span>$</p>
                     </div>
-                    <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                    <p class="title">Gorra NY</p>
                     <a href="" data-id="5" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-1.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Chaqueta.jpg')}}" alt="">
                         <p><span>45</span>$</p>
                     </div>
-                    <p class="title"> MSI Vigor GK30 Teclado Gaming RGB</p>
+                    <p class="title">Chaqueta</p>
                     <a href="" data-id="6" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-2.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Gafas gamer.jpg')}}" alt="">
                         <p><span>23.99</span>$</p>
                     </div>
-                    <p class="title"> Genesis Thor 300 RGB Teclado Mecánico Gaming RGB Switch Rojo</p>
+                    <p class="title">Gafas gamer</p>
                     <a href="" data-id="7" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-3.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Anillo.jpg')}}" alt="">
                         <p><span>50</span>$</p>
                     </div>
-                    <p class="title"> Mars Gaming MKXTKL Teclado Mecánico Gaming RGB</p>
+                    <p class="title">Anillo</p>
                     <a href="" data-id="8" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-4.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Gorra.jpg')}}" alt="">
                         <p><span>16</span>$</p>
                     </div>
-                    <p class="title"> Trust GXT 881 Odyss Teclado Gaming Semi-Mecánico RGB</p>
+                    <p class="title">Gorra Monastery</p>
                     <a href="" data-id="9" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-5.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/Perros.jpg')}}" alt="">
                         <p><span>17.50</span>$</p>
                     </div>
-                    <p class="title"> Krom Krusher Teclado Gaming Híbrido RGB + Ratón</p>
+                    <p class="title">Perros</p>
                     <a href="" data-id="10" class="btn-add-cart">Agregar</a>
                 </div>
                 <div class="carts">
                     <div>
-                        <img src="./images/products/keyboard-1.jpg" alt="">
+                        <img src="{{url_for('static', filename='assets/images/GorraOU.jpg')}}" alt="">
                         <p><span>45</span>$</p>
                     </div>
-                    <p class="title"> Corsair K55 RGB PRO XT Teclado Gaming Retroiluminado Negro</p>
+                    <p class="title">Gorra Atleticos</p>
                     <a href="" data-id="11" class="btn-add-cart">Agregar</a>
                 </div>
             </div>
@@ -381,9 +400,7 @@
          
 
         
-        <footer>
-            <p class="author">🪐 by <a href="https://github.com/garu2" target="_blank">GaryAT</a></p>
-        </footer>
+       
     
         <script>
             function showCart(x){
