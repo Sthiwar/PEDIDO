@@ -11,12 +11,25 @@ header{
     margin-top: -10px;
     z-index: 99;
 }
-
-
+.container{
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+.header-section div{
+    position: relative;
+}
 .header-section p{
     position: absolute;
-    top: -3px;
-    right: -33px;
+    top: -24px;
+    right: -8px;
     background-color: #fff;
     padding: 1px 6px;
     border-radius: 50%;
@@ -26,16 +39,14 @@ header{
     line-height: 18px;
 }
 .logo{
-    width: 150px;
-    height: 100px;
+    width: 164px;
+    height: 84px;
     cursor: pointer;
 }
 
 .cart{
     width: 39px;
-    /* height: 38px; */
-    position: absolute;
-    top: 16%;
+    height: 38px;
 }
 .cart-products{
     position: absolute!important;
