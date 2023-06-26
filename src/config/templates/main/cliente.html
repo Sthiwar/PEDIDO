@@ -16,8 +16,13 @@
                            <a class="nav-link" href="/fronted/index">Cerrar Sesion<span class="sr-only">(current)</span></a>
                         </li>
                        
-                        <li class="nav-item">
-                           <a class="nav-link" href="/fronted/productos">Productos</a>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label"> Categorias <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/fronted/accesorios">Accesorios</a></li>
+                              <li><a href="/fronted/ropa">Ropa</a></li>
+                              <li><a href="/fronted/comida">Comida</a></li>
+                           </ul>
                         </li>
                         
                         <li class="nav-item">
@@ -41,7 +46,6 @@
                               
                               
                         </div>
-                        <a href="" class="btn-add-cart" data-id="2">Realizar Pedido</a>
                         </li>
                        
 
@@ -396,19 +400,5 @@
          </div>
       </section>
       
-      <!-- jQery -->
-      <script src="js/jquery-3.4.1.min.js"></script>
-      <!-- popper js -->
-      <script src="js/popper.min.js"></script>
-      <!-- bootstrap js -->
-      <script src="js/bootstrap.js"></script>
-      <!-- custom js -->
-      <script src="js/custom.js"></script>
 
-      <script src="./customCa.js" ></script>
-
-      
-
-      <script src="{{url_for('static', filename='js/guardar/login.js')}}"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 {% endblock %}
